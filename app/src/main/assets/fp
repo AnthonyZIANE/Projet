@@ -1,0 +1,27 @@
+{
+  "phares": {
+    "liste": [
+      {
+        "id": "1" ,
+        "name": "L’Espiguette" ,
+        "filename": "phare_espiguette",
+        "region": "PACA",
+        "construction": 1837
+      },
+      {
+        "id": "2" ,
+        "name": "Le Planier" ,
+        "filename": "phare_planier",
+        "region": "PACA",
+        "construction": 1959
+      },
+      {
+              "id": "3" ,
+              "name": "La Canche" ,
+              "filename": "phare_canche",
+              "region": "PASDECALAIS",
+              "construction": 1947
+            }
+    ]
+  }
+}

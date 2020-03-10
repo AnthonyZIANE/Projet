@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity
                 Log.d(TAG, nom);
                 Log.d(TAG, filename);
                 Log.d(TAG, region);
-                Log.d(TAG, construction);
+//                Log.d(TAG, construction);
 
 
             }

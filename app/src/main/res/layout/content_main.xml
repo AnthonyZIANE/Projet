@@ -5,7 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8"
+    android:background="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main" />
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="269dp"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:drawableTint="#000000"
+        android:fontFamily="cursive"
+        android:lineSpacingExtra="14sp"
+        android:text=" Les Phares de France !"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

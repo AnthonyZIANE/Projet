@@ -39,6 +39,9 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
         holder.mContentView.setText(mValues.get(position).content);
+        holder.mregionview.setText(mValues.get(position).region);
+        holder.manneeview.setText(mValues.get(position).annee);
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +64,8 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
+        public final TextView mregionview;
+        public final TextView manneeview;
         public DummyItem mItem;
 
         public ViewHolder(View view) {
@@ -68,6 +73,8 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mView = view;
             mIdView = (TextView) view.findViewById(R.id.item_number);
             mContentView = (TextView) view.findViewById(R.id.content);
+            mregionview = (TextView) view.findViewById(R.id.region);
+            manneeview = (TextView) view.findViewById(R.id.annee);
         }
 
         @Override

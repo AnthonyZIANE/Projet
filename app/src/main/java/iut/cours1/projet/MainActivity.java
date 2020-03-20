@@ -46,14 +46,15 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    final static String TAG="MainActibity";
+    final static String TAG="MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         context = getApplicationContext();
 
-//        loadJson();
+        DummyContent.loadPhareJson();
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -125,41 +126,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void jtoString() throws JSONException, IOException {
-        try {
-            BufferedReader br = new BufferedReader(new
-                    InputStreamReader(getContext().getAssets().open("fp.json")));
-            StringBuilder sb = new StringBuilder();
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-            String str = new String(sb.toString());
-            JSONObject jObjConnection = new JSONObject(str);
-            JSONObject jsonBix = jObjConnection.getJSONObject("phares");
-            JSONArray jsonA = jsonBix.getJSONArray("liste");
-            for (int i = 0; i < jsonA.length(); i++) {
-                JSONObject nomObj = (JSONObject) jsonA.get(i);
-                String id = nomObj.getString("id");
-                String nom = nomObj.getString("name");
-                String filename = nomObj.getString("filename");
-                String region = nomObj.getString("region");
-                String construction = nomObj.getString("construction");
-                Log.d(TAG, id);
-                Log.d(TAG, nom);
-                Log.d(TAG, filename);
-                Log.d(TAG, region);
-//                Log.d(TAG, construction);
 
-
-            }
-
-
-        }catch(IOException e){
-                e.printStackTrace();
-            }
-
-        }
 
     }
 
